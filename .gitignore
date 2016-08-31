@@ -1,0 +1,13 @@
+
+
+# Subversion files
+.svn
+
+# phpstorm project files
+.idea
+
+#模块
+node_modules
+
+#构建目录
+build

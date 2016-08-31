@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "1.1.1",
+  "description": "just a test",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murisly/node.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "murisly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/murisly/node/issues"
+  },
+  "homepage": "https://github.com/murisly/node#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
