@@ -12,3 +12,4 @@ exports.inherit = function(p) {
         return Object.create(p);
     }
 }
+
