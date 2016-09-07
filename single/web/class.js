@@ -20,3 +20,11 @@ Math.prototype = {
 var a = new Math();
 var retult = a.add(2, 3);
 var b = 1;
+
+var point = {x:1,y:1};
+var c = Object.create(point);
+c.x = 2;
+console.log(c.x);
+point.y = 2;
+console.log(point.x);
+console.log(c.y);
