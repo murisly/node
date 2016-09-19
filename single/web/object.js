@@ -1,14 +1,19 @@
 
+// 函数对象
+function add(name){
+    this.name = name;
+}
 
-// 直接对象量
+console.log(add.prototype);
+console.log(add.__proto__);
+
+var person = new add('jam');
+console.log(person.__proto__ === person.constructor.prototype);
+
+// 普通对象
 var test = {a:1, b:2}
-var a = 2;
+console.log(test.prototype);
+console.log(test.__proto__);
 
-// 通过new创建的对象
-var c = new Array();
-var b = new Date();
 
-// 原型
-var f = Object.create(test);
-console.log(f.toString());
-var e;
+var a = 1;
