@@ -1,5 +1,5 @@
 'use strict';
-
+//a test mode
 function add(a, b) {
     return a + b;
 }

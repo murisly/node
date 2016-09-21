@@ -1,12 +1,32 @@
 
+<<<<<<< HEAD
+// 函数对象
+function add(name){
+    this.name = name;
+}
+=======
 function log(num, obj) {
     console.log(num.toString());
     console.log(obj);
 }
 
+>>>>>>> ad1208c7c7d5be6f2bc29d4ef07930444f34871a
 
-// 直接对象量
+console.log(add.prototype);
+console.log(add.__proto__);
+
+var person = new add('jam');
+console.log(person.__proto__ === person.constructor.prototype);
+
+// 普通对象
 var test = {a:1, b:2}
+<<<<<<< HEAD
+console.log(test.prototype);
+console.log(test.__proto__);
+
+
+var a = 1;
+=======
 log(1, test.prototype);  // =>undefined
 log(2, test.__proto__);  // =>{}
 
@@ -68,3 +88,4 @@ log(17, p.constructor);  //
 
 
 var e;
+>>>>>>> ad1208c7c7d5be6f2bc29d4ef07930444f34871a
