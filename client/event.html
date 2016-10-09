@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>event</title>
+    <style type="text/css">
+        #click {
+            font: bold 24pt sans;
+        }
+    </style>
+</head>
+<body>
+<h1>event</h1>
+<div id="click">click</div>
+</body>
+</html>
+    <script type="text/javascript">
+        var item = document.getElementById("click");
+        item.onclick = function() {
+            console.log("click");
+        }
+    </script>

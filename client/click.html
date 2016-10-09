@@ -5,9 +5,7 @@
     <script type="text/javascript">
         function display() {
             var item = document.getElementById("clock");
-            //console.log(item);
             var now = new Date();
-            console.log(now.toLocaleTimeString());
             item.innerHTML = now.toLocaleTimeString();
             setTimeout(display, 1000);
         }
@@ -24,5 +22,7 @@
 <body>
 <h1>clock</h1>
 <div id="clock"></div>
+<a href="javascript:new Date().toLocaleTimeString(); console.log('123');"></a>
+<input id="add" type="text" name="add">
 </body>
 </html>
