@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timer</title>
+    <style>
+        #timer {
+
+        }
+    </style>
+</head>
+<body>
+<div id="timer">time</div>
+<button onclick="stop();">stop</button>
+<button onclick="start();">start</button>
+<button onclick="stopShow();">showStop</button>
+<button onclick="startShow();">showStart</button>
+</body>
+</html>
+<script>
+    var timer = null;
+    var inner = null;
+
+    function display() {
+        var item = document.getElementById("timer");
+        item.innerHTML = new Date().toLocaleString();
+        timer = setTimeout(display, 1000);
+    }
+
+    function stop() {
+        console.log("stop");
+        clearTimeout(timer);
+    }
+
+    function start() {
+        console.log('start');
+        display();
+    }
+
+    function show() {
+        var item = document.getElementById('timer');
+        item.innerHTML = new Date().toLocaleString();
+    }
+
+    function startShow() {
+        inner = setInterval(show, 1000);
+    }
+
+    function stopShow() {
+        clearInterval(inner);
+    }
+</script>
