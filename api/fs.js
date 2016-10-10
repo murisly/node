@@ -1,7 +1,7 @@
 
 var fs = require('fs');
 
-test();
+rename();
 
 function read() {
 	fs.readFile('d:\\a.txt', 'utf8', function(err, data){
@@ -25,7 +25,14 @@ function write() {
 
 function test() {
 	fs.readFile("/", 'utf-8', function(err, data) {
-
+		console.log(err);
 	});
 }
 
+function rename() {
+	fs.rename("test.txt", "123.txt", function(err){
+		if (err) {
+			throw err;
+		}
+	});
+}
