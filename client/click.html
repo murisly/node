@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>click</title>
+    <script type="text/javascript">
+        function display() {
+            var item = document.getElementById("clock");
+            var now = new Date();
+            item.innerHTML = now.toLocaleTimeString();
+            setTimeout(display, 1000);
+        }
+        window.onload = display;
+    </script>
+    <style type="text/css">
+        #clock {
+            font: bold 24pt sans;
+            padding: 10px;
+            border: solid black 2px;
+        }
+    </style>
+</head>
+<body>
+<h1>clock</h1>
+<div id="clock"></div>
+<a href="javascript:new Date().toLocaleTimeString(); console.log('123');"></a>
+<input id="add" type="text" name="add">
+</body>
+</html>
