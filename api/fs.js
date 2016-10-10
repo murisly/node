@@ -1,7 +1,7 @@
 
 var fs = require('fs');
 
-rename();
+stat();
 
 function read() {
 	fs.readFile('d:\\a.txt', 'utf8', function(err, data){
@@ -34,5 +34,30 @@ function rename() {
 		if (err) {
 			throw err;
 		}
+	});
+}
+
+/*
+{ dev: 311270,
+	mode: 33206,
+	nlink: 1,
+	uid: 0,
+	gid: 0,
+	rdev: 0,
+	blksize: undefined,
+	ino: 9570149209327916,
+	size: 6,
+	blocks: undefined,
+	atime: Mon Oct 10 2016 11:26:45 GMT+0800 (中国标准时间),
+	mtime: Mon Oct 10 2016 11:26:49 GMT+0800 (中国标准时间),
+	ctime: Mon Oct 10 2016 11:26:57 GMT+0800 (中国标准时间),
+	birthtime: Mon Oct 10 2016 11:26:45 GMT+0800 (中国标准时间) }
+*/
+function stat() {
+	fs.stat("123.txt", function(err, data) {
+		if (err) {
+			throw err;
+		}
+		console.log(data);
 	});
 }
