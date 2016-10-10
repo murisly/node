@@ -1,7 +1,7 @@
 
 var fs = require('fs');
 
-write();
+test();
 
 function read() {
 	fs.readFile('d:\\a.txt', 'utf8', function(err, data){
@@ -21,5 +21,11 @@ function write() {
 			console.log("save success!");
 		}
 	})
+}
+
+function test() {
+	fs.readFile("/", 'utf-8', function(err, data) {
+
+	});
 }
 
