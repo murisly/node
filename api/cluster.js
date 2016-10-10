@@ -51,5 +51,5 @@ if (cluster.isMaster) {
 	http.createServer(function(req,res) {
 		res.writeHead(200);
 		res.end('hello ' + cluster.worker.id + " pid: " + process.pid);
-	}).listen(8080);
+	}).listen(3000);
 }
